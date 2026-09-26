@@ -42,6 +42,39 @@ Prefer interactive? Run `aiot-sdk create` with no flags — it walks you through
 
 ## CLI commands
 
+### `login` — sign in to the Universal AIoT backend
+
+```
+aiot-sdk login [options]
+```
+
+Prompts for email/password and stores the JWT (0600) at
+`~/.config/aiot-sdk/config.json`. `--api-url` overrides the backend address
+(default `http://localhost:4000`). `--token <jwt>` stores an existing token
+instead — e.g. a Firebase ID token when the backend has Firebase Auth
+enabled (`FIREBASE_PROJECT_ID` set).
+
+### `devices` — list your devices
+
+```
+aiot-sdk devices
+```
+
+Lists devices visible to the logged-in user (uses the stored token).
+
+### `provision` — issue device MQTT credentials
+
+```
+aiot-sdk provision --device DEV-XXXX --out ./aiot.credentials.env
+```
+
+Calls `POST /api/devices/:id/credentials` (requires ADMIN on the device) and
+writes `MQTT_USER`/`MQTT_PASS` to a dotenv file (0600). The secret is shown
+once by the API and never stored server-side — keep the file safe. Pair with
+`init --credentials-file` to bake the credentials into firmware, or flash
+them onto the device any way you like; the device can then connect from
+anywhere via the advertised `PUBLIC_MQTT_URL`.
+
 ### `create` — scaffold a project
 
 ```

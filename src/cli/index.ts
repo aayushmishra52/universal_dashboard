@@ -19,6 +19,10 @@ import { registerRepair } from "../commands/repair.js";
 import { registerClean } from "../commands/clean.js";
 import { registerFlash } from "../commands/flash.js";
 import { registerPackage } from "../commands/package.js";
+import { registerLogin } from "../commands/login.js";
+import { registerDevices } from "../commands/devices.js";
+import { registerProvision } from "../commands/provision.js";
+import { registerInit } from "../commands/init.js";
 
 function packageVersion(): string {
   try {
@@ -45,6 +49,10 @@ registerRepair(program);
 registerClean(program);
 registerFlash(program);
 registerPackage(program);
+registerLogin(program);
+registerDevices(program);
+registerProvision(program);
+registerInit(program);
 
 program.parseAsync(process.argv).catch((e: unknown) => {
   console.error(`\nFatal: ${(e as Error).message}`);

@@ -1,1 +1,62 @@
-{"author":"<your-name> (replace with your name)","bin":{"aiot-sdk":"./dist/cli/index.js"},"bugs":{"url":"https://github.com/<your-username>/aiot-sdk/issues"},"dependencies":{"@inquirer/prompts":"^7.8.0","aedes":"^0.51.0","commander":"^12.1.0","ejs":"^3.1.10","mqtt":"^5.10.0","zod":"^3.23.8"},"description":"aiot-sdk CLI: scaffold, validate, build, test, flash and package Universal AIoT ESP32 firmware projects.","devDependencies":{"@types/ejs":"^3.1.5","@types/node":"^22.0.0","typescript":"^5.7.3","vitest":"^3.0.0"},"engines":{"node":">=22"},"exports":{".":"./dist/index.js"},"files":["dist","templates","README.md","LICENSE"],"homepage":"https://github.com/<your-username>/aiot-sdk#readme","keywords":["iot","esp32","mqtt","firmware","sdk","aiot","arduino"],"license":"MIT","name":"aiot-sdk","publishConfig":{"access":"public"},"repository":{"type":"git","url":"https://github.com/<your-username>/aiot-sdk.git"},"scripts":{"build":"tsc -p tsconfig.json","prepublishOnly":"npm run build","test":"vitest run"},"type":"module","version":"1.0.0"}
+{
+  "author": "<your-name> (replace with your name)",
+  "bin": {
+    "aiot-sdk": "./dist/cli/index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/<your-username>/aiot-sdk/issues"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^7.8.0",
+    "aedes": "^0.51.0",
+    "commander": "^12.1.0",
+    "ejs": "^3.1.10",
+    "mqtt": "^5.10.0",
+    "zod": "^3.23.8"
+  },
+  "description": "aiot-sdk CLI: scaffold, validate, build, test, flash and package Universal AIoT ESP32 firmware projects.",
+  "devDependencies": {
+    "@types/ejs": "^3.1.5",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "templates",
+    "README.md",
+    "LICENSE"
+  ],
+  "homepage": "https://github.com/<your-username>/aiot-sdk#readme",
+  "keywords": [
+    "iot",
+    "esp32",
+    "mqtt",
+    "firmware",
+    "sdk",
+    "aiot",
+    "arduino"
+  ],
+  "license": "MIT",
+  "name": "aiot-sdk",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<your-username>/aiot-sdk.git"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build",
+    "test": "vitest run"
+  },
+  "type": "module",
+  "version": "1.1.0"
+}
