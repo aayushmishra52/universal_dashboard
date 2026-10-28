@@ -276,5 +276,5 @@ The CLI is the primary surface, but the package also exports building blocks (`r
 
 ## Related
 
-- Platform repo: https://github.com/<your-username>/universal-aiot
+- Platform repo: https://github.com/aayushmishra52/universal-aiot.git
 - Docs: [docs/GENERATOR.md](./docs/GENERATOR.md) (templates, registries, validation) · [docs/FIRMWARE.md](./docs/FIRMWARE.md) (runtime, MQTT topics, command lifecycle) · [docs/TESTING.md](./docs/TESTING.md) (test pipeline) · [PUBLISHING.md](./PUBLISHING.md) (release process)
